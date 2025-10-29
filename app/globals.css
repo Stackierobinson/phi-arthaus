@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply m-0 p-0 box-border;
+  }
+
+  body {
+    @apply text-gray-900 leading-relaxed bg-white;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .text-shadow-basquiat {
+    text-shadow: 3px 3px 0px #FFD700;
+  }
+
+  .text-shadow-warhol {
+    text-shadow: 3px 3px 0px #FF6347;
+  }
+
+  .text-shadow-purple {
+    text-shadow: 3px 3px 0px #008B8B;
+  }
+
+  .transition-transform-shadow {
+    @apply transition-all duration-300;
+  }
+
+  @keyframes shimmer {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+
+  .animate-shimmer {
+    animation: shimmer 2s infinite;
+  }
+}
